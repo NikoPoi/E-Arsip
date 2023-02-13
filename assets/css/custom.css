@@ -1,0 +1,22 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #f8eeec;
+    overflow-x: hidden;
+}
+a {
+    text-decoration: none !important;
+}
+
+a:hover {
+    text-decoration: underline !important;
+}
+
+.inputSurat {
+    margin-top: 30px;
+}
+
+#tanggal {
+    padding: 10px 10px 10px 10px;
+    color: black;
+}
