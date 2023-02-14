@@ -10,9 +10,10 @@
     <?php 
         include('./Components/navbar.php')
     ?>
+
     <section class="container-fluid">
         <div class="container d-flex justify-content-between">
-            <div class="display-5 fw-normal">Surat Masuk<div class="h5 fw-normal">View & Input</div></div>
+            <div class="display-5 fw-normal">Surat Disposisi<div class="h5 fw-normal">View & Input</div></div>
             <div class="bg-light border border-1 align-self-center d-inline rounded d-flex" style="padding-right: 2px;">
                 <img class="calendar img-fluid" src="./assets/images/calendar.png" alt="calendar" width="60px" height="20px">
                 <div class="vr"></div>
@@ -53,10 +54,9 @@
             <?php 
                 include('./Components/pagination.php')
             ?>
-
             <!-- Button trigger modal -->
             <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-            Input Surat Masuk
+            Input Surat Disposisi
             </button>
     
             <!-- Modal -->
@@ -64,7 +64,7 @@
                 <div class="modal-dialog">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <div class="modal-title h3 text-center" id="staticBackdropLabel">INPUT SURAT MASUK</div>
+                            <div class="modal-title h3 text-center" id="staticBackdropLabel">INPUT SURAT DISPOSISI</div>
                             <!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> -->
                         </div>
                         <div class="modal-body">
@@ -74,25 +74,15 @@
                                     <input type="text" name="no_surat" id="no_surat" class="form-control" placeholder="" aria-describedby="helpId">
                                 </div>
                                 <div class="form-group mb-2">
-                                    <label for="" class="h6 fw-bold">Asal Surat</label>
-                                    <input type="text" name="no_surat" id="no_surat" class="form-control" placeholder="" aria-describedby="helpId">
-                                </div>
-                                <div class="row">
-                                    <div class="form-group mb-2 col">
-                                        <label for="" class="h6 fw-bold">Tanggal Masuk</label>
-                                        <input type="text" name="no_surat" id="no_surat" class="form-control" placeholder="" aria-describedby="helpId">
-                                    </div>
-                                    <div class="form-group mb-2 col">
-                                        <label for="" class="h6 fw-bold">Tanggal Keluar</label>
-                                        <input type="text" name="no_surat" id="no_surat" class="form-control" placeholder="" aria-describedby="helpId">
-                                    </div>
-                                </div>
-                                <div class="form-group mb-2">
-                                    <label for="" class="h6 fw-bold">Keterangan</label>
+                                    <label for="" class="h6 fw-bold">Tujuan Surat</label>
                                     <input type="text" name="no_surat" id="no_surat" class="form-control" placeholder="" aria-describedby="helpId">
                                 </div>
                                 <div class="form-group mb-2">
-                                    <label for="" class="h6 fw-bold">Ringkasan</label>
+                                    <label for="" class="h6 fw-bold">Catatan</label>
+                                    <input type="text" name="no_surat" id="no_surat" class="form-control" placeholder="" aria-describedby="helpId">
+                                </div>
+                                <div class="form-group mb-2">
+                                    <label for="" class="h6 fw-bold">Isi</label>
                                     <textarea class="form-control" rows="3"></textarea>
                                 </div>
                             </form>
@@ -106,7 +96,6 @@
             </div>
         </div>
     </section>
-
 
 
     <?php 

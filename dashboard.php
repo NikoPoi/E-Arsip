@@ -37,7 +37,7 @@
                     </a>
                 </div>
                 <div class="col-md-4">
-                <a href="./input-surat-masuk.php" class="card text-dark" style="text-decoration: none !important;">
+                <a href="./input-surat-keluar.php" class="card text-dark" style="text-decoration: none !important;">
                         <div class="card-body mt-2 d-flex align-items-center justify-content-around">
                             <div class="text-center">
                                 <div class="h5 fw-normal">Surat Keluar</div>
@@ -51,7 +51,7 @@
                     </a>
                 </div>
                 <div class="col-md-4">
-                <a href="./input-surat-masuk.php" class="card text-dark" style="text-decoration: none !important;">
+                <a href="./input-surat-disposisi.php" class="card text-dark" style="text-decoration: none !important;">
                         <div class="card-body mt-2 d-flex align-items-center justify-content-around">
                             <div class="text-center">
                                 <div class="h5 fw-normal">Surat Disposisi</div>
@@ -67,6 +67,108 @@
             </div>
         </div>
         
+        <!-- AGENDA SURAT MASUK -->
+        <div class="agenda container mt-4 card">
+            <div class="m-4">
+                <div class="row d-lg-flex align-items-center">
+                    <div class="col">
+                        <div class="display-6 fw-normal">
+                            Agenda Surat Masuk
+                        </div>
+                        <div class="h5 fw-normal">Overview Surat Masuk</div>
+                    </div>
+                    <div class="col-md-3">
+                        <label for="">Tanggal Masuk</label>
+                        <input type="text" class="form-control">
+                    </div>-
+                    <div class="col-md-3">
+                        <label for="">Tanggal Keluar</label>
+                        <input type="text" class="form-control">
+                    </div>
+                </div>
+    
+                <table class="table mt-2">
+                    <thead>
+                        <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">First</th>
+                        <th scope="col">Last</th>
+                        <th scope="col">Handle</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                        <th scope="row">1</th>
+                        <td>Mark</td>
+                        <td>Otto</td>
+                        <td>@mdo</td>
+                        </tr>
+                        <tr>
+                        <th scope="row">2</th>
+                        <td>Jacob</td>
+                        <td>Thornton</td>
+                        <td>@fat</td>
+                        </tr>
+                        <tr>
+                        <th scope="row">3</th>
+                        <td colspan="2">Larry the Bird</td>
+                        <td>@twitter</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <!-- AGENDA SURAT KELUAR -->
+        <div class="agenda container mt-4 card">
+            <div class="m-4">
+                <div class="row d-lg-flex align-items-center">
+                    <div class="col">
+                        <div class="display-6 fw-normal">
+                            Agenda Surat Keluar
+                        </div>
+                        <div class="h5 fw-normal">Overview Surat Keluar</div>
+                    </div>
+                    <div class="col-md-3">
+                        <label for="">Tanggal Masuk</label>
+                        <input type="text" class="form-control">
+                    </div>-
+                    <div class="col-md-3">
+                        <label for="">Tanggal Keluar</label>
+                        <input type="text" class="form-control">
+                    </div>
+                </div>
+    
+                <table class="table mt-2">
+                    <thead>
+                        <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">First</th>
+                        <th scope="col">Last</th>
+                        <th scope="col">Handle</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                        <th scope="row">1</th>
+                        <td>Mark</td>
+                        <td>Otto</td>
+                        <td>@mdo</td>
+                        </tr>
+                        <tr>
+                        <th scope="row">2</th>
+                        <td>Jacob</td>
+                        <td>Thornton</td>
+                        <td>@fat</td>
+                        </tr>
+                        <tr>
+                        <th scope="row">3</th>
+                        <td colspan="2">Larry the Bird</td>
+                        <td>@twitter</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
     </section>
 
     <?php 

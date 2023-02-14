@@ -19,14 +19,14 @@
                     <a class="nav-link h6 text-dark" href="./input-surat-masuk.php">Surat Masuk</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link h6 text-dark" href="">Surat Keluar</a>
+                    <a class="nav-link h6 text-dark" href="./input-surat-keluar.php">Surat Keluar</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link h6 text-dark" href="">Surat Disposisi</a>
+                    <a class="nav-link h6 text-dark" href="./input-surat-disposisi.php">Surat Disposisi</a>
                 </li>
-                <li class="nav-item">
+                <!-- <li class="nav-item">
                     <a class="nav-link h6 text-white btn btn-primary" href="./login.php" style="text-decoration: none !important;">LOGIN</a>
-                </li>
+                </li> -->
             </ul>
         </div>
     </div>
