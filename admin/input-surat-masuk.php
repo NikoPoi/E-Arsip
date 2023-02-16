@@ -17,10 +17,9 @@ if (!isset($_SESSION['username'])) {
     <?php 
         include('./Components/navbar.php')
     ?>
-
     <section class="container-fluid">
         <div class="container d-flex justify-content-between">
-            <div class="display-5 fw-normal">Surat Keluar<div class="h5 fw-normal">View & Input</div></div>
+            <div class="display-5 fw-normal">Surat Masuk<div class="h5 fw-normal">View & Input</div></div>
             <div class="bg-light border border-1 align-self-center d-inline rounded d-flex" style="padding-right: 2px;">
                 <img class="calendar img-fluid" src="./assets/images/calendar.png" alt="calendar" width="60px" height="20px">
                 <div class="vr"></div>
@@ -32,18 +31,18 @@ if (!isset($_SESSION['username'])) {
             <table class="table">
                 <thead>
                     <tr>
-                    <th scope="col">ID Surat</th>
-                    <th scope="col">Tanggal Keluar</th>
-                    <th scope="col">Tanggal Dibuat</th>
+                    <th scope="col">ID Masuk</th>
+                    <th scope="col">Tanggal Masuk</th>
+                    <th scope="col">Tanggal Terima</th>
+                    <th scope="col">Ringkasan Surat</th>
+                    <th scope="col">Asal Surat</th>
                     <th scope="col">Keterangan</th>
-                    <th scope="col">Ringkasan</th>
+                    <th scope="col">ID Petugas</th>
                     <th scope="col">Kepada</th>
-                    <th scope="col">Petugas</th>
-                    <th scope="col">Action</th>
                     </tr>
                 </thead>
                 <?php
-                include 'backend/surat-keluar/GetData.php';
+                include 'backend/surat-masuk/GetData.php';
                 ?>
                 <!-- <tbody>
                     <tr>
@@ -65,10 +64,13 @@ if (!isset($_SESSION['username'])) {
                     </tr>
                 </tbody> -->
             </table>
+            <?php 
+                include('./Components/pagination.php')
+            ?>
 
             <!-- Button trigger modal -->
             <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-            Input Surat Keluar
+            Input Surat Masuk
             </button>
     
             <!-- Modal -->
@@ -76,37 +78,44 @@ if (!isset($_SESSION['username'])) {
                 <div class="modal-dialog">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <div class="modal-title h3 text-center" id="staticBackdropLabel">INPUT SURAT KELUAR</div>
+                            <div class="modal-title h3 text-center" id="staticBackdropLabel">INPUT SURAT MASUK</div>
                             <!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> -->
                         </div>
                         <div class="modal-body">
-                            <form action="backend/surat-keluar/PostData.php" method="POST">
+                            <form action="backend/surat-masuk/PostData.php" method="POST">
                             <input name="id" value="<?php echo $_SESSION['username'] ?>"  hidden />
                                 <div class="form-group mb-2">
                                     <label for="" class="h6 fw-bold">ID Surat</label>
                                     <input type="text" name="Data1"  class="form-control" placeholder="" aria-describedby="helpId">
                                 </div>
                                 <div class="form-group mb-2">
-                                    <label for="" class="h6 fw-bold">Keterangan</label>
+                                    <label for="" class="h6 fw-bold">Asal Surat</label>
                                     <input type="text" name="Data2" id="no_surat" class="form-control" placeholder="" aria-describedby="helpId">
                                 </div>
                                 <div class="form-group mb-2">
-                                    <label for="" class="h6 fw-bold">Kepada</label>
+                                    <label for="" class="h6 fw-bold">Tujuan Surat</label>
                                     <input type="text" name="Data3" id="no_surat" class="form-control" placeholder="" aria-describedby="helpId">
                                 </div>
                                 <div class="row">
                                     <div class="form-group mb-2 col">
-                                        <label for="" class="h6 fw-bold">Tanggal Keluar</label>
+                                        <label for="" class="h6 fw-bold">Tanggal Masuk</label>
                                         <input type="date" name="Data4" id="no_surat" class="form-control" placeholder="" aria-describedby="helpId">
                                     </div>
                                     <div class="form-group mb-2 col">
-                                        <label for="" class="h6 fw-bold">Tanggal Dibuat</label>
+                                        <label for="" class="h6 fw-bold">Tanggal Terima</label>
                                         <input type="date" name="Data5" id="no_surat" class="form-control" placeholder="" aria-describedby="helpId">
                                     </div>
                                 </div>
                                 <div class="form-group mb-2">
+                                    <label for="" class="h6 fw-bold">Keterangan</label>
+                                    <input type="text" name="Data6" id="no_surat" class="form-control" placeholder="" aria-describedby="helpId">
+                                </div>
+                                <div class="form-group mb-2">
                                     <label for="" class="h6 fw-bold">Ringkasan</label>
-                                    <textarea class="form-control" name="Data6" rows="3"></textarea>
+                                    <textarea class="form-control" name="Data7" rows="3"></textarea>
+                                </div>
+                                <div class="form-group mb-2">
+                                <button type="submit" class="btn btn-primary">Save</button>
                                 </div>
                             </form>
                         </div>
@@ -118,6 +127,7 @@ if (!isset($_SESSION['username'])) {
             </div>
         </div>
     </section>
+
 
 
     <?php 

@@ -37,7 +37,7 @@ session_start();
                                         Remember Me
                                     </label>
                                 </div>
-                                <button type="submit" class="btn btn-primary px-5"><div class="fw-normal">Submit</div></button>
+                                <button type="submit" class="btn btn-primary px-5 "><div class="fw-normal">Submit</div></button>
                                 <div class="form-group mt-4">
                                     <div class="row justify-content-center">
                                         <div class="col text-center">

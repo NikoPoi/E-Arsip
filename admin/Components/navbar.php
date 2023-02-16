@@ -1,4 +1,3 @@
-
 <!-- NAVBAR -->
 <nav class="navbar navbar-expand-lg bg-transparent">
     <div class="container">
@@ -29,9 +28,9 @@
                     <a class="nav-link h6 text-dark dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         <?php echo $_SESSION['username'] ?>
                     </a>
-                        <ul class="dropdown-menu">
+                    <ul class="dropdown-menu">
                         <li><a onclick="return confirm('Apakah anda Ingin Log Out??')" class="dropdown-item" href="backend/logout.php">LOG OUT</a></li>
-                        </ul>
+                    </ul>
                 </li>
             </ul>
         </div>

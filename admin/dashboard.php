@@ -8,12 +8,12 @@ if (!isset($_SESSION['username'])) {
 <?php
 
 include 'backend/koneksi.php';
- 
+
 // mengambil data barang
 $surat_masuk  = mysqli_query($kon,"SELECT * FROM surat_masuk");
 $surat_keluar = mysqli_query($kon,"SELECT * FROM surat_keluar");
 $disposisi = mysqli_query($kon,"SELECT * FROM disposisi");
- 
+
 // menghitung data barang
 $jumlah_surat        = mysqli_num_rows($surat_masuk);
 $jumlah_surat_keluar = mysqli_num_rows($surat_keluar);
@@ -36,10 +36,12 @@ $jumlah_disposisi    = mysqli_num_rows($disposisi);
     <section class="dashboard container-fluid">
         <div class="container d-flex justify-content-between">
             <div class="display-5 fw-normal">Dashboard<div class="h5 fw-normal">Overview & Statistic</div></div>
-            <div class="bg-light border border-1 align-self-center d-inline rounded d-flex" style="padding-right: 2px;">
-                <img class="calendar img-fluid" src="./assets/images/calendar.png" alt="calendar" width="60px" height="20px">
-                <div class="vr"></div>
-                <div class="text-dark align-self-center text-center" id="tanggal" style="font-size: 19px;"></div>
+            <div class="align-self-center d-flex align-items-center d-inline">
+                <div class="bg-light border border-1 rounded d-flex ml-4" style="padding-right: 2px;">
+                    <img class="calendar img-fluid" src="./assets/images/calendar.png" alt="calendar" width="60px" height="20px">
+                    <div class="vr"></div>
+                    <div class="text-dark align-self-center text-center" id="tanggal" style="font-size: 19px;"></div>
+                </div>
             </div>
         </div>
 
@@ -105,7 +107,7 @@ $jumlah_disposisi    = mysqli_num_rows($disposisi);
                 <table class="table mt-2">
                     <thead>
                     <tr>
-                    <th scope="col">ID Surat</th>
+                    <th scope="col">ID Masuk</th>
                     <th scope="col">Ringkasan Surat</th>
                     <th scope="col">Asal Surat</th>
                     <th scope="col">Keterangan</th>
@@ -141,7 +143,7 @@ $jumlah_disposisi    = mysqli_num_rows($disposisi);
                 <table class="table mt-2">
                     <thead>
                         <tr>
-                        <th scope="col">ID Surat</th>
+                        <th scope="col">ID Masuk</th>
                         <th scope="col">Keterangan</th>
                         <th scope="col">Ringkasan</th>
                         <th scope="col">Kepada</th>

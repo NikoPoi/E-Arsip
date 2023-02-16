@@ -32,7 +32,7 @@ if (!isset($_SESSION['username'])) {
             <table class="table">
                 <thead>
                     <tr>
-                    <th scope="col">Id Surat</th>
+                    <th scope="col">Id Disposisi</th>
                     <th scope="col">Tujuan Surat</th>
                     <th scope="col">Isi</th>
                     <th scope="col">Catatan</th>
@@ -91,12 +91,11 @@ if (!isset($_SESSION['username'])) {
                                     <label for="" class="h6 fw-bold">Isi</label>
                                     <textarea class="form-control" name="Data6" rows="3"></textarea>
                                 </div>
-                            
-                        </div>
-                        <div class="form-group modal-footer">
-                            <button type="submit" class="btn btn-primary">Save</button>
-                            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
-                        </div>
+                            </div>
+                            <div class="form-group modal-footer">
+                                <button type="submit" class="btn btn-primary">Save</button>
+                                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                            </div>
                         </form>
                     </div>
                 </div>

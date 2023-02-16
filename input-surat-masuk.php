@@ -1,3 +1,9 @@
+<?php
+    session_start();
+    if (!isset($_SESSION['username'])) {
+        header("Location: login.php");
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,7 +13,7 @@
     <title>Surat Masuk | E-Arsip</title>
 </head>
 <body>
-    <?php 
+    <?php
         include('./Components/navbar.php')
     ?>
     <section class="container-fluid">
@@ -24,13 +30,21 @@
             <table class="table">
                 <thead>
                     <tr>
-                    <th scope="col">#</th>
-                    <th scope="col">First</th>
-                    <th scope="col">Last</th>
-                    <th scope="col">Handle</th>
+                    <th scope="col">ID Surat</th>
+                    <th scope="col">Tanggal Masuk</th>
+                    <th scope="col">Tanggal Terima</th>
+                    <th scope="col">Ringkasan Surat</th>
+                    <th scope="col">Asal Surat</th>
+                    <th scope="col">Keterangan</th>
+                    <th scope="col">ID Petugas</th>
+                    <th scope="col">Kepada</th>
+                    <th scope="col">Action</th>
                     </tr>
                 </thead>
-                <tbody>
+                <?php
+                include 'backend/surat-masuk/GetData.php';
+                ?>
+                <!-- <tbody>
                     <tr>
                     <th scope="row">1</th>
                     <td>Mark</td>
@@ -48,7 +62,7 @@
                     <td colspan="2">Larry the Bird</td>
                     <td>@twitter</td>
                     </tr>
-                </tbody>
+                </tbody> -->
             </table>
             <?php 
                 include('./Components/pagination.php')
@@ -68,38 +82,45 @@
                             <!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> -->
                         </div>
                         <div class="modal-body">
-                            <form action="">
+                            <form action="backend/surat-masuk/PostData.php" method="POST">
+                            <input name="id" value="<?php echo $_SESSION['username'] ?>"  hidden />
                                 <div class="form-group mb-2">
-                                    <label for="" class="h6 fw-bold">Nomor Surat</label>
-                                    <input type="text" name="no_surat" id="no_surat" class="form-control" placeholder="" aria-describedby="helpId">
+                                    <label for="" class="h6 fw-bold">ID Surat</label>
+                                    <input type="text" name="Data1"  class="form-control" placeholder="" aria-describedby="helpId">
                                 </div>
                                 <div class="form-group mb-2">
                                     <label for="" class="h6 fw-bold">Asal Surat</label>
-                                    <input type="text" name="no_surat" id="no_surat" class="form-control" placeholder="" aria-describedby="helpId">
+                                    <input type="text" name="Data2" id="no_surat" class="form-control" placeholder="" aria-describedby="helpId">
+                                </div>
+                                <div class="form-group mb-2">
+                                    <label for="" class="h6 fw-bold">Tujuan Surat</label>
+                                    <input type="text" name="Data3" id="no_surat" class="form-control" placeholder="" aria-describedby="helpId">
                                 </div>
                                 <div class="row">
                                     <div class="form-group mb-2 col">
                                         <label for="" class="h6 fw-bold">Tanggal Masuk</label>
-                                        <input type="text" name="no_surat" id="no_surat" class="form-control" placeholder="" aria-describedby="helpId">
+                                        <input type="date" name="Data4" id="no_surat" class="form-control" placeholder="" aria-describedby="helpId">
                                     </div>
                                     <div class="form-group mb-2 col">
-                                        <label for="" class="h6 fw-bold">Tanggal Keluar</label>
-                                        <input type="text" name="no_surat" id="no_surat" class="form-control" placeholder="" aria-describedby="helpId">
+                                        <label for="" class="h6 fw-bold">Tanggal Terima</label>
+                                        <input type="date" name="Data5" id="no_surat" class="form-control" placeholder="" aria-describedby="helpId">
                                     </div>
                                 </div>
                                 <div class="form-group mb-2">
                                     <label for="" class="h6 fw-bold">Keterangan</label>
-                                    <input type="text" name="no_surat" id="no_surat" class="form-control" placeholder="" aria-describedby="helpId">
+                                    <input type="text" name="Data6" id="no_surat" class="form-control" placeholder="" aria-describedby="helpId">
                                 </div>
                                 <div class="form-group mb-2">
                                     <label for="" class="h6 fw-bold">Ringkasan</label>
-                                    <textarea class="form-control" rows="3"></textarea>
+                                    <textarea class="form-control" name="Data7" rows="3"></textarea>
+                                </div>
+                                <div class="form-group mb-2">
+                                <button type="submit" class="btn btn-primary">Save</button>
                                 </div>
                             </form>
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
-                            <button type="button" class="btn btn-primary">Save</button>
                         </div>
                     </div>
                 </div>
