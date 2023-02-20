@@ -1,7 +1,7 @@
 <?php
 session_start();
 if (!isset($_SESSION['username'])) {
-  header("Location: login.php");
+    header("Location: login.php");
 }
 
 ?>
@@ -45,25 +45,6 @@ if (!isset($_SESSION['username'])) {
                 <?php
                 include 'backend/surat-keluar/GetData.php';
                 ?>
-                <!-- <tbody>
-                    <tr>
-                    <th scope="row">1</th>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
-                    </tr>
-                    <tr>
-                    <th scope="row">2</th>
-                    <td>Jacob</td>
-                    <td>Thornton</td>
-                    <td>@fat</td>
-                    </tr>
-                    <tr>
-                    <th scope="row">3</th>
-                    <td colspan="2">Larry the Bird</td>
-                    <td>@twitter</td>
-                    </tr>
-                </tbody> -->
             </table>
 
             <!-- Button trigger modal -->
@@ -79,8 +60,8 @@ if (!isset($_SESSION['username'])) {
                             <div class="modal-title h3 text-center" id="staticBackdropLabel">INPUT SURAT KELUAR</div>
                             <!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> -->
                         </div>
+                        <form action="backend/surat-keluar/PostData.php" method="POST">
                         <div class="modal-body">
-                            <form action="backend/surat-keluar/PostData.php" method="POST">
                             <input name="id" value="<?php echo $_SESSION['username'] ?>"  hidden />
                                 <div class="form-group mb-2">
                                     <label for="" class="h6 fw-bold">ID Surat</label>
@@ -108,11 +89,12 @@ if (!isset($_SESSION['username'])) {
                                     <label for="" class="h6 fw-bold">Ringkasan</label>
                                     <textarea class="form-control" name="Data6" rows="3"></textarea>
                                 </div>
-                            </form>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
-                        </div>
+                            </div>
+                            <div class="form-group modal-footer">
+                                <button type="submit" class="btn btn-primary">Save</button>
+                                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                            </div>
+                        </form>
                     </div>
                 </div>
             </div>

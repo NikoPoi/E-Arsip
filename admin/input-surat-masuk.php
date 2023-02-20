@@ -81,8 +81,8 @@ if (!isset($_SESSION['username'])) {
                             <div class="modal-title h3 text-center" id="staticBackdropLabel">INPUT SURAT MASUK</div>
                             <!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> -->
                         </div>
+                        <form action="backend/surat-masuk/PostData.php" method="POST">
                         <div class="modal-body">
-                            <form action="backend/surat-masuk/PostData.php" method="POST">
                             <input name="id" value="<?php echo $_SESSION['username'] ?>"  hidden />
                                 <div class="form-group mb-2">
                                     <label for="" class="h6 fw-bold">ID Surat</label>
@@ -114,14 +114,12 @@ if (!isset($_SESSION['username'])) {
                                     <label for="" class="h6 fw-bold">Ringkasan</label>
                                     <textarea class="form-control" name="Data7" rows="3"></textarea>
                                 </div>
-                                <div class="form-group mb-2">
+                            </div>
+                            <div class="form-group modal-footer">
                                 <button type="submit" class="btn btn-primary">Save</button>
-                                </div>
-                            </form>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
-                        </div>
+                                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                            </div>
+                        </form>
                     </div>
                 </div>
             </div>
